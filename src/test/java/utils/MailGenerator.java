@@ -5,7 +5,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 
-@Builder
 public class MailGenerator {
 
     public static String getTemporaryEmail() {
