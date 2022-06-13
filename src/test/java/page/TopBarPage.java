@@ -5,8 +5,6 @@ import elements.TopBar;
 import lombok.extern.log4j.Log4j2;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import utils.Waiter;
-
 import static utils.StringConstant.*;
 
 @Log4j2
@@ -38,7 +36,6 @@ public class TopBarPage extends BasePage{
 
     public String getTextOfWelcoming(){
         log.info("Get text of welcome message");
-        new Waiter().waitVisibilityOf(welcoming);
         return welcoming.getText() + userName.getText();
     }
 
@@ -66,7 +63,6 @@ public class TopBarPage extends BasePage{
 
     public void clickSettingsButton(){
         log.info("Click \"Settings\"");
-        new Waiter().waitElementToBeClickable(settingsButton);
         settingsButton.click();
     }
 
